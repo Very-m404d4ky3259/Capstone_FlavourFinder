@@ -57,6 +57,6 @@ def classification(payload, target_size=(224, 224), threshold=0.95):
     class_name = class_names[class_index]
 
     if percentage > threshold:
-        return "Detected as: " + class_name, percentage * 100
+        return class_name, percentage * 100
     else:
-        return "Not detected", 0
+        return "Unable to detect ingredients", percentage * 100
