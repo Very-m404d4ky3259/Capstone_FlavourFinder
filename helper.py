@@ -45,7 +45,7 @@ def predict_image(model, img_array):
     predictions = model.predict(img_array)
     return predictions
 
-def classification(payload, target_size=(224, 224), threshold=0.6):
+def classification(payload, target_size=(224, 224), threshold=0.95):
     try:
         img_array = preprocess_image(payload, target_size)
     except Exception as e:
